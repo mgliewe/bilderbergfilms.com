@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Bilderberg Films</title>
+        <link rel = "stylesheet" type = "text/css" href = "css/video-js.min.css">        
+        <link rel = "stylesheet" type = "text/css" href = "css/jquery-ui.min.css">
+        <link rel = "stylesheet" type = "text/css" href = "css/style.css">        
+        <script type = "text/javascript" src = "js/jquery-1.11.3.min.js"></script>        
+        <script type = "text/javascript" src = "js/jquery-ui.min.js"></script>
+        <script type = "text/javascript" src = "js/video.js"></script>
+        <script type = "text/javascript" src = "js/index-page.js"></script>
+
+        <style>
+	        #button1 { top: 52.01%; left:43.44%; width:14.00%; height:10.53%; }
+        </style>        
+    </head>
+    <body>
+        <div id = "video">
+            <video id="player" width="100%">
+                <source src = "videos/LOGO_bilderbergfilms_BilderbergfilmsWEB.webm" type = "video/webm"> 
+                <source src = "videos/LOGO_bilderbergfilms_BilderbergfilmsWEB.mp4" type = "video/mp4"> 
+            </video>
+	        <a id="button1" class="overlay-button" href = "start.html"></a>            
+        </div>
+	<div id='sdiv' style="position: absolute; width: 100%; height: 100%; top:0px; left: 0px">
+		<table width="100%" height="100%"><tr><td align="center">
+					<button id="start">Start</button>
+		</td></tr></table>
+	</div>
+	<script>
+		$(function() {
+			$('#start').on('click', function() { $('#player video')[0].play(); $(this).hide(); $('#sdiv').hide(); });
+		});
+	</script>
+
+    </body>
+</html>
